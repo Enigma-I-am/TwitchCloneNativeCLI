@@ -1,5 +1,5 @@
-import React, {memo, useCallback, useContext, useEffect, useMemo, useRef} from 'react';
-import {View, StyleSheet, TouchableOpacity, Text, Image, SafeAreaView, FlatList} from 'react-native';
+import React, { memo, useCallback, useContext, useEffect, useMemo, useRef } from 'react';
+import { View, StyleSheet, TouchableOpacity, Text, Image, SafeAreaView, FlatList } from 'react-native';
 import {
   AutoCompleteInput,
   Channel,
@@ -12,14 +12,13 @@ import {
   useMessageContext,
   useMessageInputContext,
 } from 'stream-chat-react-native';
-import type {StackNavigationProp} from '@react-navigation/stack';
+import type { StackNavigationProp } from '@react-navigation/stack';
 import { useHeaderHeight } from '@react-navigation/elements';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {AppContext} from '../AppContext';
-import {SingleASTNode, State, ReactOutput} from 'simple-markdown';
-import {NavigationParametersList} from '../Navigation';
-import {useStreamChat} from '../useStreamChat';
+import { AppContext } from '../AppContext';
+import { NavigationParametersList } from '../Navigation';
+import { useStreamChat } from '../useStreamChat';
 import { emoteAsset, emoticons, gifAssest } from '../utils/supportedReactions';
 import { BottomSheetModal } from '@gorhom/bottom-sheet';
 
@@ -29,7 +28,7 @@ interface ChannelScreenProps {
 
 
 const SendButton = () => {
-  const {sendMessage, text, imageUploads, fileUploads, appendText} =
+  const { sendMessage, text, imageUploads, fileUploads, appendText } =
     useMessageInputContext();
   const snapPoints = useMemo(() => ['50%', '50%'], []);
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
@@ -57,8 +56,8 @@ const SendButton = () => {
           {' '}
           <Image
             key={item.tag}
-            source={{uri: item.image}}
-            style={{width: 30, height: 30}}
+            source={{ uri: item.image }}
+            style={{ width: 30, height: 30 }}
           />
         </Text>
       </TouchableOpacity>
@@ -67,7 +66,7 @@ const SendButton = () => {
   );
 
   return (
-    <View style={{flexDirection: 'column'}}>
+    <View style={{ flexDirection: 'column' }}>
       <View
         style={[
           {
@@ -86,7 +85,7 @@ const SendButton = () => {
             size={21}
           />
         </TouchableOpacity>
-        <View style={{width: 5}} />
+        <View style={{ width: 5 }} />
         <TouchableOpacity onPress={handlePresentPress}>
           <Ionicons name={'add-outline'} color={'blue'} size={25} />
         </TouchableOpacity>
@@ -114,7 +113,7 @@ const CustomInput = () => {
       <View style={[styles.input]}>
         <AutoCompleteInput />
       </View>
-      <View style={{width: 5}} />
+      <View style={{ width: 5 }} />
       <SendButton />
     </View>
   );
@@ -124,12 +123,12 @@ const assetDirectory =
   '/Users/enigma/react_native/TwitchCloneNativeCLI/assets/';
 
 const SimpleChatText = memo(props => {
-  const {message} = useMessageContext();
+  const { message } = useMessageContext();
   const displayName = message.user?.username ?? message.user?.id;
   const userNameColor = message.user?.color as string;
   return (
     <View style={styles.messageContainer}>
-      <Text style={[styles.messageUserName, {color: userNameColor}]}>
+      <Text style={[styles.messageUserName, { color: userNameColor }]}>
         {displayName}:{' '}
       </Text>
       {/* <Text style={styles.messageText}>{message.text}</Text> */}
@@ -182,47 +181,47 @@ const SimpleChatText = memo(props => {
                 state: State,
               ) => {
                 const emotes: Record<string, string> = {
-                  aaugh: gifAssest({name: 'aaugh'}),
-                  ayayajam: gifAssest({name: 'ayayajam'}),
-                  balddab: gifAssest({name: 'balddab'}),
-                  baldflick: gifAssest({name: 'baldflick'}),
-                  notsquishy: emoteAsset({name: 'notsquishy'}),
-                  poledoge: emoteAsset({name: 'poledoge'}),
-                  rarepepe: emoteAsset({name: 'rarepepe'}),
-                  ronsmug: emoteAsset({name: 'ronsmug'}),
-                  saltycorn: emoteAsset({name: 'saltycorn'}),
-                  baldfloss: gifAssest({name: 'baldfloss'}),
-                  baldspin: gifAssest({name: 'baldspin'}),
-                  baldyappp: gifAssest({name: 'baldyappp'}),
-                  baldyikes: gifAssest({name: 'baldyikes'}),
-                  kappscool: emoteAsset({name: 'kappscool'}),
-                  karappa: emoteAsset({name: 'karappa'}),
-                  kkona: emoteAsset({name: 'kkona'}),
-                  hhhehehe: emoteAsset({name: 'hhhehehe'}),
-                  lul: emoteAsset({name: 'lul'}),
-                  baners: gifAssest({name: 'baners'}),
-                  bropls: gifAssest({name: 'bropls'}),
-                  catjam: gifAssest({name: 'catjam'}),
-                  checkers: gifAssest({name: 'checkers'}),
-                  click: gifAssest({name: 'click'}),
-                  coomtime: gifAssest({name: 'coomtime'}),
-                  crawlers: gifAssest({name: 'crawlers'}),
-                  deadlole: gifAssest({name: 'deadlole'}),
-                  deskchan: gifAssest({name: 'deskchan'}),
-                  eato: gifAssest({name: 'eato'}),
-                  eddiebaldmansmash: gifAssest({name: 'eddiebaldmansmash'}),
-                  eddieknead: gifAssest({name: 'eddieknead'}),
-                  eddiespin: gifAssest({name: 'eddiespin'}),
-                  eekum: gifAssest({name: 'eekum'}),
-                  flappers: gifAssest({name: 'flappers'}),
-                  fubaldi: gifAssest({name: 'fubaldi'}),
-                  gwakgwak: gifAssest({name: 'gwakgwak'}),
-                  guitartime: gifAssest({name: 'guitartime'}),
-                  humpers: gifAssest({name: 'humpers'}),
-                  hypernodders: gifAssest({name: 'hypernodders'}),
-                  hypernopers: gifAssest({name: 'hypernopers'}),
-                  hyperpeepod: gifAssest({name: 'hyperpeepod'}),
-                  johnsouls: gifAssest({name: 'johnsouls'}),
+                  aaugh: gifAssest({ name: 'aaugh' }),
+                  ayayajam: gifAssest({ name: 'ayayajam' }),
+                  balddab: gifAssest({ name: 'balddab' }),
+                  baldflick: gifAssest({ name: 'baldflick' }),
+                  notsquishy: emoteAsset({ name: 'notsquishy' }),
+                  poledoge: emoteAsset({ name: 'poledoge' }),
+                  rarepepe: emoteAsset({ name: 'rarepepe' }),
+                  ronsmug: emoteAsset({ name: 'ronsmug' }),
+                  saltycorn: emoteAsset({ name: 'saltycorn' }),
+                  baldfloss: gifAssest({ name: 'baldfloss' }),
+                  baldspin: gifAssest({ name: 'baldspin' }),
+                  baldyappp: gifAssest({ name: 'baldyappp' }),
+                  baldyikes: gifAssest({ name: 'baldyikes' }),
+                  kappscool: emoteAsset({ name: 'kappscool' }),
+                  karappa: emoteAsset({ name: 'karappa' }),
+                  kkona: emoteAsset({ name: 'kkona' }),
+                  hhhehehe: emoteAsset({ name: 'hhhehehe' }),
+                  lul: emoteAsset({ name: 'lul' }),
+                  baners: gifAssest({ name: 'baners' }),
+                  bropls: gifAssest({ name: 'bropls' }),
+                  catjam: gifAssest({ name: 'catjam' }),
+                  checkers: gifAssest({ name: 'checkers' }),
+                  click: gifAssest({ name: 'click' }),
+                  coomtime: gifAssest({ name: 'coomtime' }),
+                  crawlers: gifAssest({ name: 'crawlers' }),
+                  deadlole: gifAssest({ name: 'deadlole' }),
+                  deskchan: gifAssest({ name: 'deskchan' }),
+                  eato: gifAssest({ name: 'eato' }),
+                  eddiebaldmansmash: gifAssest({ name: 'eddiebaldmansmash' }),
+                  eddieknead: gifAssest({ name: 'eddieknead' }),
+                  eddiespin: gifAssest({ name: 'eddiespin' }),
+                  eekum: gifAssest({ name: 'eekum' }),
+                  flappers: gifAssest({ name: 'flappers' }),
+                  fubaldi: gifAssest({ name: 'fubaldi' }),
+                  gwakgwak: gifAssest({ name: 'gwakgwak' }),
+                  guitartime: gifAssest({ name: 'guitartime' }),
+                  humpers: gifAssest({ name: 'humpers' }),
+                  hypernodders: gifAssest({ name: 'hypernodders' }),
+                  hypernopers: gifAssest({ name: 'hypernopers' }),
+                  hyperpeepod: gifAssest({ name: 'hyperpeepod' }),
+                  johnsouls: gifAssest({ name: 'johnsouls' }),
                 };
 
                 const segments = node.text.split(' ');
@@ -233,8 +232,8 @@ const SimpleChatText = memo(props => {
                         {' '}
                         <Image
                           key={state.key}
-                          source={{uri: emotes[s]}}
-                          style={{width: 15, height: 15}}
+                          source={{ uri: emotes[s] }}
+                          style={{ width: 15, height: 15 }}
                         />
                       </Text>
                     );
@@ -256,11 +255,11 @@ const SimpleChatText = memo(props => {
 export const ChannelScreen: React.FC<ChannelScreenProps> = ({
   navigation,
 }: ChannelScreenProps) => {
-  const {channel} = useContext(AppContext);
+  const { channel } = useContext(AppContext);
   const headerHeight = useHeaderHeight();
-  const {setTopInset} = useAttachmentPickerContext();
+  const { setTopInset } = useAttachmentPickerContext();
 
-  const {client, i18nInstance} = useStreamChat();
+  const { client, i18nInstance } = useStreamChat();
 
   useEffect(() => {
     setTopInset(headerHeight);
@@ -274,9 +273,13 @@ export const ChannelScreen: React.FC<ChannelScreenProps> = ({
    * An issue is created for this.
    * */
   return (
-    <Chat client={client} i18nInstance={i18nInstance}>
-      <Channel channel={channel as any} keyboardVerticalOffset={headerHeight}>
-        <View style={{flex: 1}}>
+    <Chat client={client as any} i18nInstance={i18nInstance}>
+      <Channel
+        channel={channel as any}
+        keyboardVerticalOffset={headerHeight}
+        Input={CustomInput}
+        MessageSimple={SimpleChatText}>
+        <View style={{ flex: 1 }}>
           <MessageList />
           <MessageInput />
         </View>
@@ -339,7 +342,7 @@ const styles = StyleSheet.create({
   messageUserName: {},
   messageText: {},
 
-  flex: {flex: 1},
+  flex: { flex: 1 },
   fullWidth: {
     width: '100%',
   },
