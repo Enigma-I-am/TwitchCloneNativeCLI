@@ -1212,7 +1212,7 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@gorhom/bottom-sheet@4.1.5":
+"@gorhom/bottom-sheet@4.1.5", "@gorhom/bottom-sheet@^4.1.5":
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/@gorhom/bottom-sheet/-/bottom-sheet-4.1.5.tgz#35341d45799de28082c380db6639537b04fa0b26"
   integrity sha512-3F5P8jK3NXwT2lGwkAdkdLwDVHaRvMZalUTXjK6Ogf0Tki6idffJ3TNlQZlg8k6+OnXAx0+i80f4XaI+J4GFrA==
@@ -1222,17 +1222,7 @@
     nanoid "^3.1.20"
     react-native-redash "^16.1.1"
 
-"@gorhom/bottom-sheet@^3.6.4":
-  version "3.6.6"
-  resolved "https://registry.yarnpkg.com/@gorhom/bottom-sheet/-/bottom-sheet-3.6.6.tgz#73e8ffaba6b417c353a8933a3ed09f10a8fd3e9d"
-  integrity sha512-zI6NJDp1aApSIioPXdxfwaaxoHIu/YP3onAfYLjKzbdRNG+fwoRYiF1NsxXJAnpCP1I7krNvFemWp/obSOddQw==
-  dependencies:
-    "@gorhom/portal" "^1.0.4"
-    invariant "^2.2.4"
-    nanoid "^3.1.20"
-    react-native-redash "^16.0.10"
-
-"@gorhom/portal@^1.0.11", "@gorhom/portal@^1.0.4":
+"@gorhom/portal@^1.0.11":
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/@gorhom/portal/-/portal-1.0.12.tgz#1c0deabb3f9057c736352a88bae9ca891a100346"
   integrity sha512-JOYe85RUwiksgdMbhLWDCLpH3kgFFz+LCu1lnxOMMBQSfAKtL5kkTKVrhtmQ3Lq3lJM2paGnLc4wJrlVuaC5Jw==
@@ -1508,12 +1498,6 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
-
-"@react-native-community/blur@https://github.com/Kureev/react-native-blur/archive/refs/tags/v3.6.1.tar.gz":
-  version "3.6.1"
-  resolved "https://github.com/Kureev/react-native-blur/archive/refs/tags/v3.6.1.tar.gz#9b0c98eff5e1d7b417175c54f5198434c982d2ec"
-  dependencies:
-    prop-types "^15.5.10"
 
 "@react-native-community/cameraroll@^4.1.2":
   version "4.1.2"
@@ -6623,7 +6607,7 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^2.0.2:
+prettier@^2.0.2, prettier@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.5.1.tgz#fff75fa9d519c54cf0fce328c1017d94546bc56a"
   integrity sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==
@@ -6841,7 +6825,7 @@ react-native-reanimated@^2.4.1:
     react-native-screens "^3.4.0"
     string-hash-64 "^1.0.3"
 
-react-native-redash@^16.0.10, react-native-redash@^16.1.1:
+react-native-redash@^16.1.1:
   version "16.2.3"
   resolved "https://registry.yarnpkg.com/react-native-redash/-/react-native-redash-16.2.3.tgz#ee63e100c60f83275116e57d4e8bc79f26349db9"
   integrity sha512-vSjHA6/mBY3IpDYPish3DlG06PKNLkb/b89hw7nsDM3yxAJ7Db+yMnEL3pp2YsoYblDc3s+0+wBRlvxay4X4vQ==
@@ -7650,7 +7634,7 @@ stream-chat-react-native-core@4.1.4:
     react-native-url-polyfill "^1.3.0"
     stream-chat "6.0.0"
 
-stream-chat-react-native@^4.1.1:
+stream-chat-react-native@^4.1.4:
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/stream-chat-react-native/-/stream-chat-react-native-4.1.4.tgz#0f2b1503ae736b5fa93435e16e1a486cc00edb97"
   integrity sha512-d5FcbIR7ybk4IJrOFoZYKPbxGaUEmiYfe42aLMYuls3sWIwwenjRva7M7rArieSsGpAaxiAgrVUaj3OATtZzXg==

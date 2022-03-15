@@ -11,15 +11,6 @@ import type {StackNavigationProp} from '@react-navigation/stack';
 import {useHeaderHeight} from '@react-navigation/elements';
 
 import {AppContext} from '../AppContext';
-// import type {
-//   LocalAttachmentType,
-//   LocalChannelType,
-//   LocalCommandType,
-//   LocalEventType,
-//   LocalMessageType,
-//   LocalReactionType,
-//   LocalUserType,
-// } from '../types';
 import {NavigationParametersList} from '../Navigation';
 import {useStreamChat} from '../useStreamChat';
 
@@ -48,7 +39,7 @@ export const ChannelScreen: React.FC<ChannelScreenProps> = ({
    * An issue is created for this.
    * */
   return (
-    <Chat client={client} i18nInstance={i18nInstance}>
+    <Chat client={client as any} i18nInstance={i18nInstance}>
       <Channel channel={channel as any} keyboardVerticalOffset={headerHeight}>
         <View style={{flex: 1}}>
           <MessageList />

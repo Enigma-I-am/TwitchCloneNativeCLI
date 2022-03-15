@@ -1,31 +1,25 @@
-import React, {useState, useEffect, useContext} from 'react';
-import { Image, View, Dimensions, StyleSheet, Text } from 'react-native';
-import {useChannelsContext} from 'stream-chat-react-native';
-import {StreamChat, Channel} from 'stream-chat';
-import { ChannelsContext } from 'stream-chat-react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { AppContext } from '../AppContext';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { NavigationParametersList } from '../Navigation';
+import React, {useContext} from 'react';
+import {Image, View, Dimensions, StyleSheet, Text} from 'react-native';
+import {Channel} from 'stream-chat';
+import {TouchableOpacity} from 'react-native-gesture-handler';
+import {AppContext} from '../AppContext';
 import {NavigationContext} from '@react-navigation/native';
 
-export const ThumbNailComponent = (
-  {channel}: {channel: any}
- 
-) => {
-  const { setChannel } = useContext(AppContext);
+export const ThumbNailComponent = ({channel}: {channel: Channel}) => {
+  const {setChannel} = useContext(AppContext);
   const navigation = useContext(NavigationContext);
 
   return (
-    <TouchableOpacity onPress={() => {
-                  setChannel(channel);
-                  navigation?.navigate('Channel');
-    }}>
+    <TouchableOpacity
+      onPress={() => {
+        setChannel(channel);
+        navigation?.navigate('Channel');
+      }}>
       <View style={styles.boxContainer}>
         <View>
           <Image
             source={{
-              uri: channel.data['channelImg'],
+              uri: channel.data?.channelImg as string,
             }}
             style={styles.image}
           />
@@ -35,7 +29,7 @@ export const ThumbNailComponent = (
             {channel.cid}
           </Text>
           <Text style={{paddingHorizontal: 20, paddingVertical: 4}}>
-            {channel.data['channelName'] + ' stream'}
+            {`${channel.data?.channelName} stream`}
           </Text>
         </View>
       </View>
@@ -59,7 +53,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignSelf: 'center',
     width: Dimensions.get('window').width / 4,
-    // height: 150,
     borderRadius: 5,
   },
 });

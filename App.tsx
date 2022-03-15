@@ -4,18 +4,12 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
-import {OverlayProvider} from 'stream-chat-react-native';
+import {
+  DefaultStreamChatGenerics,
+  OverlayProvider,
+} from 'stream-chat-react-native';
 
 import {HelpScreen} from './HelpScreen';
-import type {
-  LocalAttachmentType,
-  LocalChannelType,
-  LocalCommandType,
-  LocalEventType,
-  LocalMessageType,
-  LocalReactionType,
-  LocalUserType,
-} from './types';
 import {useStreamChatTheme} from './useStreamChatTheme';
 import {AppStateProvider} from './AppContext';
 import {useStreamChat} from './useStreamChat';
@@ -31,15 +25,7 @@ function AppOverlay({children}: AppOverlayProps) {
   const {bottom} = useSafeAreaInsets();
 
   return (
-    <OverlayProvider<
-      LocalAttachmentType,
-      LocalChannelType,
-      LocalCommandType,
-      LocalEventType,
-      LocalMessageType,
-      LocalReactionType,
-      LocalUserType
-    >
+    <OverlayProvider<DefaultStreamChatGenerics>
       bottomInset={bottom}
       i18nInstance={i18nInstance}
       value={{style: theme}}>
