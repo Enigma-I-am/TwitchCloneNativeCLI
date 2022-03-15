@@ -3,14 +3,14 @@ import {Streami18n} from 'stream-chat-react-native';
 import {StreamChat} from 'stream-chat';
 import Config from 'react-native-config';
 
-import type {Client, LocalUserType} from './types';
+import type { LocalUserType} from './types';
 
 const useConnectUser = ({
   client,
   user,
   userToken,
 }: {
-  client: Client;
+  client: StreamChat;
   user: LocalUserType;
   userToken: string;
 }) => {
@@ -47,7 +47,7 @@ const getRandomColor = (): string => {
 };
 
 export const useStreamChat = () => {
-  const client = useRef<Client>(StreamChat.getInstance(Config.STREAM_API_KEY));
+  const client = useRef(StreamChat.getInstance(Config.STREAM_API_KEY));
 
   const userToken = Config.STREAM_USER_TOKEN;
   const user = {
