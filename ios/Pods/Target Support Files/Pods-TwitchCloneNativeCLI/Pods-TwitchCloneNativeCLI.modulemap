@@ -1,0 +1,6 @@
+module Pods_TwitchCloneNativeCLI {
+  umbrella header "Pods-TwitchCloneNativeCLI-umbrella.h"
+
+  export *
+  module * { export * }
+}

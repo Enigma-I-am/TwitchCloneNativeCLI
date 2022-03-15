@@ -1,0 +1,14 @@
+com/twitchclonenativecli/ReactNativeFlipper.java
+ com.twitchclonenativecli.ReactNativeFlipper
+ com.twitchclonenativecli.ReactNativeFlipper$1
+ com.twitchclonenativecli.ReactNativeFlipper$2
+ com.twitchclonenativecli.ReactNativeFlipper$2$1
+com/twitchclonenativecli/MainActivity.java
+ com.twitchclonenativecli.MainActivity
+com/twitchclonenativecli/BuildConfig.java
+ com.twitchclonenativecli.BuildConfig
+com/twitchclonenativecli/MainApplication.java
+ com.twitchclonenativecli.MainApplication
+ com.twitchclonenativecli.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

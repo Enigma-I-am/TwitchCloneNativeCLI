@@ -1,0 +1,133 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.twitchclonenativecli"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="30" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/debug/AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:4:22-64
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:5:5-79
+13-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:5:22-77
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:6:5-80
+14-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:6:22-78
+15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+15-->[com.facebook.flipper:flipper:0.99.0] /Users/enigma/.gradle/caches/transforms-3/2f5725507f1929c6ddf8255f0bef77bd/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:5-76
+15-->[com.facebook.flipper:flipper:0.99.0] /Users/enigma/.gradle/caches/transforms-3/2f5725507f1929c6ddf8255f0bef77bd/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:22-73
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[:react-native-community_netinfo] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
+16-->[:react-native-community_netinfo] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-76
+17    <uses-permission android:name="android.permission.VIBRATE" />
+17-->[:react-native-haptic-feedback] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-haptic-feedback/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-66
+17-->[:react-native-haptic-feedback] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-haptic-feedback/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-63
+18
+19    <queries>
+19-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-13:15
+20        <intent>
+20-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:18
+21            <action android:name="android.media.action.IMAGE_CAPTURE" />
+21-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-73
+21-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:21-70
+22        </intent>
+23    </queries>
+24
+25    <application
+25-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:8:5-26:19
+26        android:name="com.twitchclonenativecli.MainApplication"
+26-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:9:7-38
+27        android:allowBackup="false"
+27-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:13:7-34
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.6.0] /Users/enigma/.gradle/caches/transforms-3/5efa136d6b7a2c594211658eacead3c1/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+29        android:debuggable="true"
+30        android:icon="@mipmap/ic_launcher"
+30-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:11:7-41
+31        android:label="@string/app_name"
+31-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:10:7-39
+32        android:roundIcon="@mipmap/ic_launcher_round"
+32-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:12:7-52
+33        android:theme="@style/AppTheme"
+33-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:14:7-38
+34        android:usesCleartextTraffic="true" >
+34-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/debug/AndroidManifest.xml:8:9-44
+35        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+35-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/debug/AndroidManifest.xml:11:9-86
+35-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/debug/AndroidManifest.xml:11:19-83
+36        <activity
+36-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:15:7-25:18
+37            android:name="com.twitchclonenativecli.MainActivity"
+37-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:16:9-37
+38            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+38-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:18:9-86
+39            android:label="@string/app_name"
+39-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:17:9-41
+40            android:launchMode="singleTask"
+40-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:19:9-40
+41            android:windowSoftInputMode="adjustResize" >
+41-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:20:9-51
+42            <intent-filter>
+42-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:21:9-24:25
+43                <action android:name="android.intent.action.MAIN" />
+43-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:22:13-65
+43-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:22:21-62
+44
+45                <category android:name="android.intent.category.LAUNCHER" />
+45-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:23:13-73
+45-->/Users/enigma/react_native/TwitchCloneNativeCLI/android/app/src/main/AndroidManifest.xml:23:23-70
+46            </intent-filter>
+47        </activity>
+48
+49        <provider
+49-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-26:20
+50            android:name="androidx.core.content.FileProvider"
+50-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-62
+51            android:authorities="com.twitchclonenativecli.provider"
+51-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-60
+52            android:exported="false"
+52-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-37
+53            android:grantUriPermissions="true" >
+53-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-47
+54            <meta-data
+54-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-25:58
+55                android:name="android.support.FILE_PROVIDER_PATHS"
+55-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-67
+56                android:resource="@xml/provider_paths" />
+56-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:17-55
+57        </provider>
+58
+59        <activity
+59-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:9-30:72
+60            android:name="com.yalantis.ucrop.UCropActivity"
+60-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-60
+61            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+61-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-69
+62
+63        <provider
+63-->[:react-native-share] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+64            android:name="cl.json.RNShareFileProvider"
+64-->[:react-native-share] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-55
+65            android:authorities="com.twitchclonenativecli.rnshare.fileprovider"
+65-->[:react-native-share] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-72
+66            android:exported="false"
+66-->[:react-native-share] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+67            android:grantUriPermissions="true" >
+67-->[:react-native-share] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+68            <meta-data
+68-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-25:58
+69                android:name="android.support.FILE_PROVIDER_PATHS"
+69-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-67
+70                android:resource="@xml/share_download_paths" />
+70-->[:react-native-image-crop-picker] /Users/enigma/react_native/TwitchCloneNativeCLI/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:17-55
+71        </provider>
+72    </application>
+73
+74</manifest>

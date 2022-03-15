@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Automatically generated file. DO NOT MODIFY -->
+
+    <!-- Value from build type: debug -->
+    <integer name="react_native_dev_server_port">8081</integer>
+    <!-- Value from build type: debug -->
+    <integer name="react_native_inspector_proxy_port">8081</integer>
+    <!-- Value from default config. -->
+    <string name="STREAM_API_KEY" translatable="false">"62mwbdkdfv8j"</string>
+    <!-- Value from default config. -->
+    <string name="STREAM_USER_ID" translatable="false">"okechukwu"</string>
+    <!-- Value from default config. -->
+    <string name="STREAM_USER_TOKEN" translatable="false">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoib2tlY2h1a3d1In0.7SNsBLTxoBlGX7KfXvP-dDAZ7pGJF-sO-NPZwXkYk4o"</string>
+
+</resources>
