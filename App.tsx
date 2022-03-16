@@ -14,6 +14,7 @@ import {useStreamChatTheme} from './useStreamChatTheme';
 import {AppStateProvider} from './AppContext';
 import {useStreamChat} from './useStreamChat';
 import {Navigation} from './Navigation';
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 
 interface AppOverlayProps {
   children?: ReactElement;
@@ -40,13 +41,15 @@ function App() {
   }
 
   return (
-    <SafeAreaProvider>
-      <AppStateProvider>
-        <AppOverlay>
-          <Navigation />
-        </AppOverlay>
-      </AppStateProvider>
-    </SafeAreaProvider>
+    <BottomSheetModalProvider>
+      <SafeAreaProvider>
+        <AppStateProvider>
+          <AppOverlay>
+            <Navigation />
+          </AppOverlay>
+        </AppStateProvider>
+      </SafeAreaProvider>
+    </BottomSheetModalProvider>
   );
 }
 

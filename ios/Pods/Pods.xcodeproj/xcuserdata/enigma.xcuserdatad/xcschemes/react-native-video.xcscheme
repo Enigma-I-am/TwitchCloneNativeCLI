@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EEBB8D24F2B3531A5C5DAA668D02331F"
-               BuildableName = "libreact-native-blur.a"
-               BlueprintName = "react-native-blur"
+               BlueprintIdentifier = "3E5D106F8D3D591BD871408EEE0CC9FD"
+               BuildableName = "libreact-native-video.a"
+               BlueprintName = "react-native-video"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -5,7 +5,7 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import {AppContext} from '../AppContext';
 import {NavigationContext} from '@react-navigation/native';
 
-export const ThumbNailComponent = ({channel}: {channel: Channel}) => {
+export const ThumbNailComponent = ({channel}: {channel: any}) => {
   const {setChannel} = useContext(AppContext);
   const navigation = useContext(NavigationContext);
 

@@ -1,4 +1,5 @@
 
+
 const assetsDirectory =
   '/Users/enigma/react_native/TwitchCloneNativeCLI/assets/';
 

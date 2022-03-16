@@ -41,7 +41,7 @@ export const ChannelListScreen: React.FC<ChannelListScreenProps> = ({
   };
 
   return (
-    <Chat client={client} i18nInstance={i18nInstance}>
+    <Chat client={client as any} i18nInstance={i18nInstance}>
       <View style={{height: '100%'}}>
         <ChannelList
           filters={filters}

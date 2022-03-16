@@ -1,5 +1,13 @@
 import React, { memo, useCallback, useContext, useEffect, useMemo, useRef } from 'react';
-import { View, StyleSheet, TouchableOpacity, Text, Image, SafeAreaView, FlatList } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  Image,
+  SafeAreaView,
+  FlatList,
+} from 'react-native';
 import {
   AutoCompleteInput,
   Channel,
@@ -11,6 +19,7 @@ import {
   useAttachmentPickerContext,
   useMessageContext,
   useMessageInputContext,
+  generateRandomId,
 } from 'stream-chat-react-native';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import { useHeaderHeight } from '@react-navigation/elements';
@@ -21,11 +30,12 @@ import { NavigationParametersList } from '../Navigation';
 import { useStreamChat } from '../useStreamChat';
 import { emoteAsset, emoticons, gifAssest } from '../utils/supportedReactions';
 import { BottomSheetModal } from '@gorhom/bottom-sheet';
+import {SingleASTNode, State, ReactOutput} from 'simple-markdown';
 
 interface ChannelScreenProps {
   navigation: StackNavigationProp<NavigationParametersList, 'Channel'>;
 }
-
+// TODO: Dismiss keyboard and show bottomsheet
 
 const SendButton = () => {
   const { sendMessage, text, imageUploads, fileUploads, appendText } =
@@ -66,7 +76,7 @@ const SendButton = () => {
   );
 
   return (
-    <View style={{ flexDirection: 'column' }}>
+    <View style={{flexDirection: 'column'}}>
       <View
         style={[
           {
@@ -85,7 +95,7 @@ const SendButton = () => {
             size={21}
           />
         </TouchableOpacity>
-        <View style={{ width: 5 }} />
+        <View style={{width: 5}} />
         <TouchableOpacity onPress={handlePresentPress}>
           <Ionicons name={'add-outline'} color={'blue'} size={25} />
         </TouchableOpacity>
@@ -96,6 +106,7 @@ const SendButton = () => {
         snapPoints={snapPoints}>
         <SafeAreaView>
           <FlatList
+            key={generateRandomId()}
             data={data}
             keyExtractor={i => i.tag}
             renderItem={renderItem}
@@ -277,12 +288,22 @@ export const ChannelScreen: React.FC<ChannelScreenProps> = ({
       <Channel
         channel={channel as any}
         keyboardVerticalOffset={headerHeight}
+        MessageHeader={() => null}
+        MessageFooter={() => null}
+        // keyboardVerticalOffset={0}
+        // key={generateRandomId()}
+        forceAlignMessages={true}
+        onLongPressMessage={() => {}}
+        hasImagePicker={false}
+        hasCommands={false}
+        hasFilePicker={false}
+        hideStickyDateHeader={true}
+        hideDateSeparators={true}
         Input={CustomInput}
         MessageSimple={SimpleChatText}>
-        <View style={{ flex: 1 }}>
-          <MessageList />
-          <MessageInput />
-        </View>
+        <MessageList  />
+        <MessageInput giphyActive={false} />
+        <View style={styles.bottomSpaces} />
       </Channel>
     </Chat>
   );
